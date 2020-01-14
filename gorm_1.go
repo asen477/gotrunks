@@ -1,6 +1,7 @@
 /**
  * User: Trunks(Gao)
  * Date: 2020/01/14
+ * gorm框架ORM MySql连接
  */
 package main
 

@@ -1,6 +1,7 @@
 /**
  * User: Trunks(Gao)
  * Date: 2019/11/09
+ * 函数判断是否是质数
  */
 package main
 
