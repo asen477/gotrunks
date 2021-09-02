@@ -1,13 +1,20 @@
 # HTTP Server
 [server]
-	Address     = ":8199"
+	Address     = ":9999"
 	ServerRoot  = "public"
-	ServerAgent = "gf-app"
-	LogPath     = "/tmp/log/gf-app/server"
+	ServerAgent = "Trunks"
+	# 系统日志目录，启动，访问，异常
+	LogPath     = "./log/gf-app/server"
+    # 系统访问日志
+    AccessLogEnabled = true
+    # 系统异常日志panic
+    ErrorLogEnabled  = true
+
 
 # Logger.
 [logger]
-    Path        = "/tmp/log/gf-app"
+    Path        = "./log/gf-app/server"
+    # 日志级别
     Level       = "all"
     Stdout      = true
 
