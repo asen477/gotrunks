@@ -1,7 +1,7 @@
 package controller
 
 import (
-	"hello/constant"
+	"gotrunks/gin-demo/constant"
 	"net/http"
 
 	"github.com/gin-gonic/gin"

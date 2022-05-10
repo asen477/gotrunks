@@ -2,10 +2,10 @@ package controller
 
 import (
 	"fmt"
-	"hello/core/log"
-	"hello/core/redis"
-	"hello/model"
-	"hello/service"
+	"gotrunks/gin-demo/core/log"
+	"gotrunks/gin-demo/core/redis"
+	"gotrunks/gin-demo/model"
+	"gotrunks/gin-demo/service"
 	"time"
 
 	"github.com/gin-gonic/gin"

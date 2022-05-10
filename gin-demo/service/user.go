@@ -1,9 +1,9 @@
 package service
 
 import (
-	"hello/core/log"
-	"hello/model"
-	"hello/repository"
+	"gotrunks/gin-demo/core/log"
+	"gotrunks/gin-demo/model"
+	"gotrunks/gin-demo/repository"
 
 	"github.com/gin-gonic/gin"
 )
@@ -22,5 +22,5 @@ func (us userService) Create(ctx *gin.Context, user *model.User) error {
 
 func (us userService) Find(ctx *gin.Context, user *model.User) error {
 	userRepository := repository.NewUserRepository(ctx)
-	return userRepository.Find(user)
+	return userRepository.Find(ctx, user)
 }

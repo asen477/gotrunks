@@ -1,8 +1,8 @@
 package middleware
 
 import (
-	"hello/constant"
-	"hello/controller"
+	"gotrunks/gin-demo/constant"
+	"gotrunks/gin-demo/controller"
 
 	"github.com/gin-gonic/gin"
 )

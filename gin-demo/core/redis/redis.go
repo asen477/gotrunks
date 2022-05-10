@@ -3,8 +3,8 @@ package redis
 import (
 	"context"
 	"fmt"
-	"hello/config"
-	"hello/core/log"
+	"gotrunks/gin-demo/config"
+	"gotrunks/gin-demo/core/log"
 	"runtime"
 
 	"github.com/go-redis/redis/v8"

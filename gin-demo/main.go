@@ -2,12 +2,12 @@ package main
 
 import (
 	"fmt"
-	"hello/config"
-	"hello/core/database"
-	"hello/core/log"
-	"hello/core/redis"
-	"hello/middleware"
-	"hello/router"
+	"gotrunks/gin-demo/config"
+	"gotrunks/gin-demo/core/database"
+	"gotrunks/gin-demo/core/log"
+	"gotrunks/gin-demo/core/redis"
+	"gotrunks/gin-demo/middleware"
+	"gotrunks/gin-demo/router"
 
 	"github.com/gin-gonic/gin"
 )

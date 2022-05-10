@@ -1,7 +1,7 @@
 package repository
 
 import (
-	"hello/model"
+	"gotrunks/gin-demo/model"
 
 	"github.com/gin-gonic/gin"
 )
@@ -18,12 +18,13 @@ func NewUserRepository(ctx *gin.Context) *userRepository {
 	return &userRepository
 }
 
-// Create user data into database
+// 将用户数据创建到数据库中
 func (ur *userRepository) Create(user *model.User) error {
 	return ur.db.Create(user).Error
 }
 
-// Find user record from database
-func (ur *userRepository) Find(user *model.User) error {
-	return ur.db.Find(user).Error
+//TODO 从数据库中查找用户记录
+func (ur *userRepository) Find(ctx *gin.Context, user *model.User) error {
+	username := ctx.DefaultPostForm("username", "aa")
+	return ur.db.Where("username=?", username).Find(user).Error
 }

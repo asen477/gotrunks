@@ -1,7 +1,7 @@
 package repository
 
 import (
-	"hello/core/database"
+	"gotrunks/gin-demo/core/database"
 
 	"github.com/gin-gonic/gin"
 	"gorm.io/gorm"

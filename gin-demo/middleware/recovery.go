@@ -1,7 +1,7 @@
 package middleware
 
 import (
-	"hello/controller"
+	"gotrunks/gin-demo/controller"
 	"net"
 	"os"
 	"runtime/debug"

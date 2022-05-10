@@ -3,7 +3,7 @@ package log
 import (
 	"context"
 	"fmt"
-	"hello/config"
+	"gotrunks/gin-demo/config"
 	"runtime"
 
 	"go.uber.org/zap"

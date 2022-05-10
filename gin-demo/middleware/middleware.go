@@ -1,7 +1,7 @@
 package middleware
 
 import (
-	"hello/core/log"
+	"gotrunks/gin-demo/core/log"
 
 	"github.com/gin-gonic/gin"
 )

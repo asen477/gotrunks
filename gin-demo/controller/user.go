@@ -1,13 +1,13 @@
 package controller
 
 import (
-	"hello/config"
-	"hello/constant"
-	"hello/core/log"
-	"hello/core/redis"
-	"hello/model"
-	"hello/service"
-	"hello/util"
+	"gotrunks/gin-demo/config"
+	"gotrunks/gin-demo/constant"
+	"gotrunks/gin-demo/core/log"
+	"gotrunks/gin-demo/core/redis"
+	"gotrunks/gin-demo/model"
+	"gotrunks/gin-demo/service"
+	"gotrunks/gin-demo/util"
 	"strconv"
 
 	"github.com/gin-gonic/gin"
@@ -23,10 +23,12 @@ func Login(ctx *gin.Context) {
 	}
 	err := service.UserService.Find(ctx, &user)
 	log.Info(ctx, "user", user)
-	if err != nil {
+
+	if err != nil || user.ID == 0 {
 		ErrorWithMessage(ctx, constant.USER_NOT_EXISTS, "用户不存在")
 		return
 	}
+
 	access_token, err := util.CreateToken(user.ID, config.App.JWT_TOKEN)
 	if err != nil {
 		Error(ctx, constant.USER_JWT_ERROR)

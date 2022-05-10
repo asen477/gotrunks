@@ -1,12 +1,12 @@
 package middleware
 
 import (
-	"hello/config"
-	"hello/constant"
-	"hello/controller"
-	"hello/core/log"
-	"hello/core/redis"
-	"hello/util"
+	"gotrunks/gin-demo/config"
+	"gotrunks/gin-demo/constant"
+	"gotrunks/gin-demo/controller"
+	"gotrunks/gin-demo/core/log"
+	"gotrunks/gin-demo/core/redis"
+	"gotrunks/gin-demo/util"
 	"strconv"
 
 	"github.com/gin-gonic/gin"

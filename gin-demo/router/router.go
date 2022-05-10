@@ -2,8 +2,8 @@ package router
 
 import (
 	"fmt"
-	"hello/controller"
-	"hello/middleware"
+	"gotrunks/gin-demo/controller"
+	"gotrunks/gin-demo/middleware"
 
 	"github.com/gin-gonic/gin"
 )

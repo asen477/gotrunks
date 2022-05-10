@@ -2,9 +2,9 @@ package database
 
 import (
 	"fmt"
-	"hello/config"
-	"hello/core/log"
-	"hello/model"
+	"gotrunks/gin-demo/config"
+	"gotrunks/gin-demo/core/log"
+	"gotrunks/gin-demo/model"
 
 	"github.com/gin-gonic/gin"
 	"gorm.io/driver/mysql"
