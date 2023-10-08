@@ -18,12 +18,12 @@ func NewUserRepository(ctx *gin.Context) *userRepository {
 	return &userRepository
 }
 
-// 将用户数据创建到数据库中
+// Create user data into database
 func (ur *userRepository) Create(user *model.User) error {
 	return ur.db.Create(user).Error
 }
 
-//TODO 从数据库中查找用户记录
+// 从数据库中查找用户记录
 func (ur *userRepository) Find(ctx *gin.Context, user *model.User) error {
 	username := ctx.DefaultPostForm("username", "aa")
 	return ur.db.Where("username=?", username).Find(user).Error

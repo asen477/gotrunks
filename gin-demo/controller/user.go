@@ -21,9 +21,9 @@ func Login(ctx *gin.Context) {
 		ErrorWithMessage(ctx, constant.USER_LOGIN_FAILED, "登录失败")
 		return
 	}
+
 	err := service.UserService.Find(ctx, &user)
 	log.Info(ctx, "user", user)
-
 	if err != nil || user.ID == 0 {
 		ErrorWithMessage(ctx, constant.USER_NOT_EXISTS, "用户不存在")
 		return
@@ -47,6 +47,7 @@ func Login(ctx *gin.Context) {
 		return
 	}
 	ctx.Writer.Header().Set("Authentication", access_token)
+	ctx.Writer.Header().Set("Token", access_token)
 	ctx.Writer.Header().Set("TraceId", uuid.New().String())
 	Success(ctx, "登录成功", gin.H{"info": user})
 

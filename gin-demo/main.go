@@ -23,7 +23,7 @@ func main() {
 	redis.ConnectRedis()   //连接redis
 	database.ConnectDB()   //连接数据库
 	database.AutoMigrate() //自动迁移
-	fmt.Print("进到这里了吗？")
+	fmt.Print("进到这里了吗？\n")
 	middleware.LoadMiddlewares(r) //加载中间件
 
 	router.LoadRoutes(r)   //加载路由
